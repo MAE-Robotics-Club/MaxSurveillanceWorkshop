@@ -39,11 +39,6 @@ void loop() {
       digitalWrite(GREEN_PIN, LOW);
       digitalWrite(YELLOW_PIN, HIGH);
     }
-    // Create vibration in the buzzer
-    digitalWrite(BUZZ_PIN, HIGH);
-    delay(10);
-    digitalWrite(BUZZ_PIN, LOW);
-    delay(5);
   } else { // The alarm is ON
     if(button_state == LOW) {
       Serial.println("Turning the alarm off...");
@@ -51,5 +46,10 @@ void loop() {
       digitalWrite(GREEN_PIN, HIGH);
       digitalWrite(YELLOW_PIN, LOW);
     }
+    // Create vibration in the buzzer
+    digitalWrite(BUZZ_PIN, HIGH);
+    delay(10);
+    digitalWrite(BUZZ_PIN, LOW);
+    delay(5);
   }
 }
